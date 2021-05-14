@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Stats preview card component | Frontend Mentor</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style> </style>
+
+  <!--  <script src="jquery-3.5.1.min.js"></script> -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.onreadystatechange = function () {
+      var state = document.readyState
+      if (state == 'interactive') {
+        document.getElementById('contents').style.visibility = "hidden";
+      } else if (state == 'complete') {
+        setTimeout(function () {
+          document.getElementById('interactive');
+          document.getElementById('load').style.visibility = "hidden";
+          document.getElementById('contents').style.visibility = "visible";
+        }, 1000);
+      }
+    }
+  </script>
+
+  <style>
+    #load {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: -10px;
+      z-index: 9999;
+      background: url("./images/tenor-loading.gif") no-repeat center center rgba(0, 0, 0, 0.25)
+    }
+  </style>
+</head>
+
+<body>
+  <div id="load"></div>
+  <div id="contents">
+    <div class="card centered" style="width: 18rem;">
+      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+      <div class="card-body row">
+        <div class="col-md-6 caption">
+          <h2>Get <span style="color: hsl(277, 64%, 61%)">insights</span> that help
+            <br /> your business grow.
+          </h2>
+
+          <br />
+          <p> Discover the benefits of data analytics and make<br /> better decisions regarding revenue, customer<br />
+            experience, and overall efficiency.
+          </p>
+          <br /><br />
+          <div class="stats">
+            <div class="child">
+              <div class="childinner">10k+ <br /><span class="stat-name">COMPANIES</span></div>
+            </div>
+            <div class="child">
+              <div class="childinner">314 <br /> <span class="stat-name">TEMPLATES</span></div>
+            </div>
+            <div class="child">
+              <div class="childinner">12M+ <br /><span class="stat-name">QUERIES</span></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 text-right">
+          <div class="background">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>
